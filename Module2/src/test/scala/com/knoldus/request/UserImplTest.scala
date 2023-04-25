@@ -18,7 +18,7 @@ class UserImplTest extends AnyFunSuiteLike {
   test("testCreateUser1") {
     val actualValue = userImpl.createUser(user)
     val expectedValue = Some("sheshnath.yadav@knoldus.com")
-    assert(actualValue===expectedValue)
+    assert(actualValue === expectedValue)
   }
 
   test("testCreateUser2") {

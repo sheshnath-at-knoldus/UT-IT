@@ -10,7 +10,7 @@ class CompanyImplTest extends AnyFunSuiteLike {
 
   val companyReadDto = new CompanyReadDto
   val emailValidator = new EmailValidator
-  val companyValidator = new CompanyValidator( companyReadDto, emailValidator)
+  val companyValidator = new CompanyValidator(companyReadDto, emailValidator)
   val companyImpl = new CompanyImpl(companyValidator)
   val knoldusCompany: Company = Company("Knoldus", "knoldus@gmail.com", "Noida")
   val zeptoCompany: Company = Company("Zepto", "Zepto@gmail.com", "Noida")
@@ -18,7 +18,7 @@ class CompanyImplTest extends AnyFunSuiteLike {
   test("testCreateCompany") {
     val actualValue = companyImpl.createCompany(knoldusCompany)
     val expectedValue = None
-    assert(actualValue===expectedValue)
+    assert(actualValue === expectedValue)
   }
 
   test("testCreateCompany that not exist") {

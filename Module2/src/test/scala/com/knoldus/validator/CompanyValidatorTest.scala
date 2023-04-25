@@ -12,14 +12,14 @@ class CompanyValidatorTest extends AnyFunSuiteLike {
 
   test("testCompanyIsValid") {
     val knoldusCompany: Company = Company("Knoldus", "knoldus@gmail.com", "Noida")
-    val companyValidator = new CompanyValidator(companyReadDto,emailValidator)
+    val companyValidator = new CompanyValidator(companyReadDto, emailValidator)
     val actualValue = companyValidator.companyIsValid(knoldusCompany)
     val expectedValue = false
-    assert(actualValue===expectedValue)
-}
+    assert(actualValue === expectedValue)
+  }
   test("testCompanyIs InValid") {
     val knoldusCompany: Company = Company("Zepto", "Zepto@gmail.com", "Noida")
-    val companyValidator = new CompanyValidator(companyReadDto,emailValidator)
+    val companyValidator = new CompanyValidator(companyReadDto, emailValidator)
     val actualValue = companyValidator.companyIsValid(knoldusCompany)
     val expectedValue = true
     assert(actualValue === expectedValue)
